@@ -1,0 +1,15 @@
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css', integrity='sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt', crossorigin='anonymous')
+
+h3= student
+  
+h3 Name of desk
+each item in desks 
+   .container(style='width: 200px;margin-left:0')
+    .row
+      .col.bg-light 
+        ul.list-group.bg
+          li#list.list-group-item
+            form(action='/booking ', method='post' )
+              input(name='name_table' value=`${item.name_table}` style="width:100%")
+              input(type='submit', value='choose')
+          

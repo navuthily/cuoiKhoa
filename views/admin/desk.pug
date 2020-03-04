@@ -1,0 +1,14 @@
+link(rel="stylesheet", href="stylesheets/style.css")
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css', integrity='sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt', crossorigin='anonymous')
+form(action='/admin/edit', method='post')
+  input(type='text', name='name_table')
+  input(type='submit', value='Add')
+h3 Name of desk
+each item in desks 
+   .container(style='width: 200px;margin-left:0')
+    .row
+      .col.bg-light 
+        ul.list-group.bg
+          li#list.list-group-item= item.name_table
+            button(onclick='myFunc()').float-right delete
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
